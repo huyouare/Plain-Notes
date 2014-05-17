@@ -22,6 +22,7 @@
 		839B4BB41927F1BB00D21A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839B4B931927F1BB00D21A95 /* UIKit.framework */; };
 		839B4BBC1927F1BB00D21A95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 839B4BBA1927F1BB00D21A95 /* InfoPlist.strings */; };
 		839B4BBE1927F1BB00D21A95 /* Plain_NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 839B4BBD1927F1BB00D21A95 /* Plain_NotesTests.m */; };
+		839B4BC91927F35F00D21A95 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 839B4BC81927F35F00D21A95 /* Data.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		839B4BB91927F1BB00D21A95 /* Plain NotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Plain NotesTests-Info.plist"; sourceTree = "<group>"; };
 		839B4BBB1927F1BB00D21A95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		839B4BBD1927F1BB00D21A95 /* Plain_NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plain_NotesTests.m; sourceTree = "<group>"; };
+		839B4BC71927F35F00D21A95 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Data.h; path = "Plain Notes/Data.h"; sourceTree = "<group>"; };
+		839B4BC81927F35F00D21A95 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Data.m; path = "Plain Notes/Data.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 		839B4B831927F1BA00D21A95 = {
 			isa = PBXGroup;
 			children = (
+				839B4BC71927F35F00D21A95 /* Data.h */,
+				839B4BC81927F35F00D21A95 /* Data.m */,
 				839B4B951927F1BB00D21A95 /* Plain Notes */,
 				839B4BB71927F1BB00D21A95 /* Plain NotesTests */,
 				839B4B8E1927F1BB00D21A95 /* Frameworks */,
@@ -254,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839B4BC91927F35F00D21A95 /* Data.m in Sources */,
 				839B4BA01927F1BB00D21A95 /* AppDelegate.m in Sources */,
 				839B4BA61927F1BB00D21A95 /* MasterViewController.m in Sources */,
 				839B4B9C1927F1BB00D21A95 /* main.m in Sources */,
