@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Data.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -21,6 +22,7 @@
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
         
+        [Data setCurrentKey:_detailItem];
         // Update the view.
         [self configureView];
     }
@@ -28,11 +30,23 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.textView.text = [self.detailItem description];
+    NSString *currentNote = [[Data getAllNotes] objectForKey:[Data getCurrentKey]];
+    if (![currentNote isEqualToString:kDefaultText]) {
+        self.textView.text = currentNote;
+    } else {
+        self.textView.text = @"";
     }
+    [self.textView becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if (![self.textView.text isEqualToString:@""]) {
+        [Data setNoteForCurrentKey:self.textView.text];
+    } else {
+        [Data removeNoteForKey:[Data getCurrentKey]];
+    }
+    [Data saveNotes];
 }
 
 - (void)viewDidLoad
